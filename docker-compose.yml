@@ -1,0 +1,13 @@
+services:
+  derper:
+    container_name: derper
+    build: .
+    restart: always
+    network_mode: host
+    volumes:
+      - type: bind
+        source: ./certs
+        target: /certs
+      - type: bind
+        source: ./config
+        target: /config
